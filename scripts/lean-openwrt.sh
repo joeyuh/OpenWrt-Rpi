@@ -8,9 +8,11 @@
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
-# Add luci-app-ssr-plus
+# Add luci-app-ssr-plus and luci-app-vssr
 pushd package/lean
 git clone --depth=1 https://github.com/fw876/helloworld
+git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb.git  #git lua-maxminddb 依赖
+git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr.git  
 popd
 
 # Clone community packages to package/community
